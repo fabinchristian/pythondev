@@ -1,25 +1,27 @@
 # Project Title
 
-One Paragraph of project description goes here
+Shortest Path Graph Viewer Tool
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Or you can also use the docker image to run/host the app locally as Desktop Application.
+
 
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
 ```
-Give examples
+Install Python3 (For local development)
+Docker (for running as a containerized app)
+
 ```
 
-### Installing
-
+## Installing
 
 ### Install Xquartz to run desktop app with docker
 
-## Install Xquartz and socat for your supported OS. I have tested on MacOS.
+### Install Xquartz and socat for your supported OS. I have tested on MacOS.
 
 ```
 brew install socat
@@ -55,11 +57,17 @@ While running docker container it's using the -e DISPLAY=docker.for.mac.host.int
 
 Dokerized the app so that it will be running platfom agnostic.
 
-## Commands to build and run docker image
+### Commands to build and run docker image
 
 ```
 docker build -t {ImageName} .
 docker run -itd --name {ContainerName} -e DISPLAY=docker.for.mac.host.internal:0 {ImageName}
+
 ```
 
+### Commands to pull the docker image from DockerHub and running as Container
 
+```
+docker pull fabinmathew/shortestpath-graphplotter:v1.0
+
+```
